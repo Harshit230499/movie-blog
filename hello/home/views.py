@@ -37,6 +37,7 @@ def contact(request):
         password = request.POST.get('password')
         contact = Contact(email = email, password=password)
         contact.save()
-        return render(request, 'thanks.html')
+        messages.success(request,'Details sent')
+        #return render(request, 'thanks.html')
     return render(request, 'contact.html')
     
