@@ -1,60 +1,143 @@
 {% extends 'base.html' %}
 {% block title%} blog {%endblock title %}
 {% block body%}
+<style>
+    
+    .post-full-header {
+        padding: 3vw !important;
+        margin: 0 auto;
+        padding: 6vw 3vw 3vw;
+        max-width: 1040px;
+        text-align: center;
+    }
 
-<article class="blog-post">
-    <h2 class="blog-post-title">Blog one</h2>
-    <p class="blog-post-meta">Nov 11 , 2021 by <a href="#">Mark</a></p>
+    .post-full-content {
+        position: relative;
+        margin: 0 auto;
+        padding: 70px 100px 0;
+        min-height: 230px;
+        font-family: Georgia, serif;
+        font-size: 1.2rem;
+        line-height: 1.6em;
+        background: #fff;
 
-    <p>This blog post shows a few different types of content that’s supported and styled with Bootstrap. Basic typography, lists, tables, images, code, and more are all supported as expected.</p>
-    <hr>
-    <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
-    <h2>Blockquotes</h2>
-    <p>This is an example blockquote in action:</p>
-    <blockquote class="blockquote">
-      <p>Quoted text goes here.</p>
-    </blockquote>
-    <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
-    <h3>Example lists</h3>
-    <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the other highly repetitive body text used throughout. This is an example unordered list:</p>
-    <ul>
-      <li>First list item</li>
-      <li>Second list item with a longer description</li>
-      <li>Third list item to close it out</li>
-    </ul>
-    <p>And this is an ordered list:</p>
-    <ol>
-      <li>First list item</li>
-      <li>Second list item with a longer description</li>
-      <li>Third list item to close it out</li>
-    </ol>
-    <p>And this is a definition list:</p>
-    <dl>
-      <dt>HyperText Markup Language (HTML)</dt>
-      <dd>The language used to describe and define the content of a Web page</dd>
-      <dt>Cascading Style Sheets (CSS)</dt>
-      <dd>Used to describe the appearance of Web content</dd>
-      <dt>JavaScript (JS)</dt>
-      <dd>The programming language used to build advanced Web sites and applications</dd>
-    </dl>
-    <h2>Inline HTML elements</h2>
-    <p>HTML defines a long list of available inline tags, a complete list of which can be found on the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">Mozilla Developer Network</a>.</p>
-    <ul>
-      <li><strong>To bold text</strong>, use <code class="language-plaintext highlighter-rouge">&lt;strong&gt;</code>.</li>
-      <li><em>To italicize text</em>, use <code class="language-plaintext highlighter-rouge">&lt;em&gt;</code>.</li>
-      <li>Abbreviations, like <abbr title="HyperText Markup Langage">HTML</abbr> should use <code class="language-plaintext highlighter-rouge">&lt;abbr&gt;</code>, with an optional <code class="language-plaintext highlighter-rouge">title</code> attribute for the full phrase.</li>
-      <li>Citations, like <cite>— Mark Otto</cite>, should use <code class="language-plaintext highlighter-rouge">&lt;cite&gt;</code>.</li>
-      <li><del>Deleted</del> text should use <code class="language-plaintext highlighter-rouge">&lt;del&gt;</code> and <ins>inserted</ins> text should use <code class="language-plaintext highlighter-rouge">&lt;ins&gt;</code>.</li>
-      <li>Superscript <sup>text</sup> uses <code class="language-plaintext highlighter-rouge">&lt;sup&gt;</code> and subscript <sub>text</sub> uses <code class="language-plaintext highlighter-rouge">&lt;sub&gt;</code>.</li>
-    </ul>
-    <p>Most of these elements are styled by browsers with few modifications on our part.</p>
-    <h2>Heading</h2>
-    <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
-    <h3>Sub-heading</h3>
-    <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
-    <pre><code>Example code block</code></pre>
-    <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the other highly repetitive body text used throughout.</p>
-  </article>
+    }
+
+    .tag-pill {
+        display: inline-block;
+        font-weight: 700;
+        padding: 3px 8px;
+        border-radius: 6px;
+        margin-bottom: 0;
+        color: #21ce99;
+        background-color: #e9faf5;
+    }
+
+    .post-full-meta-date {
+        color: #3eb0ef;
+    }
+
+    .post-full-content h3 {
+        color: #090a0b;
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
+    }
+</style>
+<header class="post-full-header">
+    <section class="post-full-meta">
+        <time class="post-full-meta-date" datetime="2022-09-03">03 September 2022</time>
+        <span class="date-divider">/</span> Rom-Com</a>
+    </section>
+    <h1 class="post-full-title">Definitely, Maybe</h1>
+</header>
+<figure class="post-full-image" align="center">
+    <img src="/static/images/pic8.jpg" width="10" height="500" class="d-block w-100" alt="...">
+</figure>
+
+
+
+<section class="post-full-content">
+    <div class="post-content">
+        <p><em>There's a place in Hollywood for Ryan Reynolds.
+
+            Definitely. Maybe.
+            </em></p>
+        <!--kg-card-begin: hr-->
+        <hr>
+        <!--kg-card-end: hr-->
+        <!--kg-card-begin: html-->
+        <div class="tag-pill--container">
+            <div class="tag-pill">Rom Com</div>
+        </div>
+        <!--kg-card-end: html-->
+        <h3 id="the-story">The Story</h3>
+        <p>On Sunday, Americans woke up an hour later<strong> </strong>than usual. At 2 am, while everyone was asleep,
+            clocks added an extra hour and reset to 1 am. That’s right, they’d just got a 25 hour day!</p>
+        <p>Wait, what just happened?</p>
+        <p>Well, winter is coming!!! Okay, Game of Thrones reference aside, this all boils down to one little
+            detail—Daylight Saving Time. </p>
+        <p>You see, at the start of spring/summer in March every year, countries like America move the clocks ahead.
+            Clocks jump from 2 am to 3 am and in the process, they forego an hour of sleep. They do this because it
+            fundamentally alters the way each day works from that point onwards. For instance, if the sun were to rise
+            at 6 am, right about when spring approaches, you’d be sleeping until 7 or 8 am and “wasting” sunlight. But
+            imagine if it rose an hour later&hairsp;—&hairsp;at 7 am instead? Then you could wake up right around
+            sunrise and feel like you did a lot more. And guess what? This jugglery would also mean the sun would set an
+            hour later&hairsp;—&hairsp;8 pm instead of 7 pm. So with this one move, you’d have felt like you put all
+            that sunlight to good use.</p>
+        <p>However, by winter, you’d have to undo this change because by then, you’d see the sun rising at 8 am for
+            instance&hairsp;—&hairsp;which is counterproductive. You’d be waking at 7 am and it would be pitch dark
+            outside. So they add an extra hour at 2 am (in some places)&hairsp;—&hairsp;which is kind of what happened
+            on Sunday. </p>
+        <p>To summarize, days are longer in the summer and shorter in the winter, and with daylight saving time, you can
+            optimize your clocks for both seasons. And if you’re wondering where this all started, well then, you’d have
+            to go back in time.</p>
+        <p>The idea is often credited to one of America’s founding fathers <a
+                href="https://www.nationalgeographic.com/science/article/060309-daylight-saving-savings-time-nation-science-sunday"
+                rel="noopener">Benjamin Franklin</a>&hairsp;. Way back in 1784, he wrote a satirical <a
+                href="http://www.webexhibits.org/daylightsaving/franklin3.html" rel="noopener">letter</a> to the editor
+            of the <em>Journal de Paris </em>saying he was astonished to see the sun rise at 6 am. He said that since no
+            Parisian woke up at 6 am, that “sunlight” was being wasted. However by changing the time i.e. by moving the
+            clock from 2 am to 3 am, the sun would begin rising at 7 am. This way, you could cut the dark nights shorter
+            and save a bunch of money on candles&hairsp;—&hairsp;The sort of stuff we explained earlier.</p>
+        <p>And from an economic standpoint, it kind of made some sense.</p>
+        <p>By 1916, the Germans implemented it to save on energy costs during World War I. The US followed suit in 1918.
+            However, some folks have been pushing back against this practice and they make a pretty good case.</p>
+        <p>It turns out that moving the clock doesn’t just affect &nbsp;the economy, but it also affects health and
+            wellbeing.</p>
+        <p>Studies<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7302868/" rel="noopener"> show</a> that this
+            disruption to sleep increases the risk of stroke and heart attack. Heart attacks<a
+                href="https://healthblog.uofmhealth.org/heart-health/why-daylight-saving-time-could-increase-your-heart-attack-risk"
+                rel="noopener"> increase by 24%</a> in the week after clocks move ahead in March. It even leads to more
+            accidents. In the US, car crashes caused by “sleepy daylight-saving drivers” may have <a
+                href="https://pubs.aeaweb.org/doi/pdfplus/10.1257/app.20140100" rel="noopener">killed at least</a> 30
+            extra people during 2002–2011. In the mining industry, there’s a <a
+                href="https://theconversation.com/the-dark-side-of-daylight-saving-time-91958" rel="noopener">6% rise in
+                injuries</a> which leads to a 67% increase in workdays that are lost.</p>
+        <p>And this happens because moving the clock ahead affects our natural sleep cycle. It takes time for people to
+            reacquaint themselves with this new order of business and it can be catastrophic in some cases.</p>
+        <p>And about that economic justification and energy savings? &nbsp;Well, turns out that’s a dud in today’s world
+            also. Take the state of Illinois for instance&hairsp;—&hairsp;They save on lighting and stuff when the
+            daylight runs longer, but those savings are offset by the use of air conditioners for instance. </p>
+        <p>In fact, the American economy alone <a
+                href="https://www.huffingtonpost.com/2013/03/10/daylight-saving-time-cost-financial-lost-sleep_n_2813799.html"
+                rel="noopener">loses $434 million</a> annually from this clock changing business. And there are no
+            “extra” productivity gains either. People don't just go to sleep after dark. They can still work. But
+            despite all this evidence, countries like the US still insist on changing the clock twice a year and if
+            you’re wondering why&hairsp;—</p>
+        <p>Well, Michael Downing, the author of <em>Spring Forward the Annual Madness of Day Light Saving Time</em><a
+                href="https://qz.com/636313/why-america-will-never-get-rid-of-day-light-saving/?utm_source=email&amp;utm_medium=daily-brief&amp;utm_content=436a39db-400e-11ec-b3e5-ea10977f6f1c"
+                rel="noopener"><em> </em>has a theory</a>. Americans have this ongoing romance with long summer
+            evenings. They love having an evening barbeque when the sun is still out during summers. And that idea in
+            turn is repeatedly reinforced by a retail lobby that includes people from the recreation industry, barbeque
+            industry, and home &amp; gardening industry. There’s also the fact that people spend more money while
+            shopping and using gasoline.</p>
+        <p>And so, despite all evidence against this confusing practice, America and other countries may keep changing
+            their clock for the foreseeable future.</p>
+        
+    </div>
+</section>
+
+
+
+
 
 {%endblock body%}
-
