@@ -30,6 +30,41 @@ def blog(request):
         'variable': "this is sent"
     }
     return render(request, 'blog.html', context )
+def blog3(request):
+    context = {
+        'variable': "this is sent"
+    }
+    return render(request, 'blog3.html', context )
+def blog4(request):
+    context = {
+        'variable': "this is sent"
+    }
+    return render(request, 'blog4.html', context )
+def blog5(request):
+    context = {
+        'variable': "this is sent"
+    }
+    return render(request, 'blog5.html', context )
+def blog6(request):
+    context = {
+        'variable': "this is sent"
+    }
+    return render(request, 'blog6.html', context )
+def blog7(request):
+    context = {
+        'variable': "this is sent"
+    }
+    return render(request, 'blog7.html', context )
+def blog8(request):
+    context = {
+        'variable': "this is sent"
+    }
+    return render(request, 'blog8.html', context )
+def blog9(request):
+    context = {
+        'variable': "this is sent"
+    }
+    return render(request, 'blog9.html', context )
     #return HttpResponse("This is services page")
 def contact(request):
     if request.method == 'POST':
